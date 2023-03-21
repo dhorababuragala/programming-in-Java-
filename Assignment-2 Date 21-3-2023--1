@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ArrayListExample {
+    public static void main(String[] args) {
+        // Create an empty ArrayList
+        ArrayList<String> list = new ArrayList<>();
+
+        // Create a scanner object for user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter elements to add to the list
+        System.out.println("Enter elements to add to the list (enter 'done' to stop):");
+
+        // Loop until the user enters 'done'
+        while (true) {
+            String input = scanner.nextLine();
+            if (input.equals("done")) {
+                break;
+            }
+            list.add(input);
+        }
+
+        // Print the list
+        System.out.println("List elements:");
+        for (String element : list) {
+            System.out.println(element);
+        }
+    }
+}
