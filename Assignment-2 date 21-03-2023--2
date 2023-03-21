@@ -1,0 +1,40 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ArrayListExample {
+    public static void main(String[] args) {
+        // Create an ArrayList with some initial elements
+        ArrayList<String> list = new ArrayList<>();
+        list.add("apple");
+        list.add("banana");
+        list.add("cherry");
+        list.add("date");
+
+        // Print the list before removing any elements
+        System.out.println("List before removal:");
+        for (String element : list) {
+            System.out.println(element);
+        }
+
+        // Create a scanner object for user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter an element to remove
+        System.out.println("Enter an element to remove:");
+        String input = scanner.nextLine();
+
+        // Remove the element from the list, if it exists
+        if (list.contains(input)) {
+            list.remove(input);
+            System.out.println("Element removed successfully.");
+        } else {
+            System.out.println("Element not found in the list.");
+        }
+
+        // Print the list after removing the element
+        System.out.println("List after removal:");
+        for (String element : list) {
+            System.out.println(element);
+        }
+    }
+}
