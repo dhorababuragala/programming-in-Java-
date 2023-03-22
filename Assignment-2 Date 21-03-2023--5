@@ -1,0 +1,31 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class FIFOQueue {
+    public static void main(String[] args) {
+        Queue<String> queue = new LinkedList<>();
+
+        // Add elements to the queue
+        queue.add("Alice");
+        queue.add("Bob");
+        queue.add("Charlie");
+        queue.add("Dave");
+        queue.add("Emily");
+
+        // Print the queue
+        System.out.println("Queue: " + queue);
+
+        // Remove and print the first element
+        String first = queue.poll();
+        System.out.println("First element removed: " + first);
+
+        // Print the queue again
+        System.out.println("Queue after removal: " + queue);
+
+        // Add a new element to the queue
+        queue.add("Frank");
+
+        // Print the queue again
+        System.out.println("Queue after addition: " + queue);
+    }
+}
